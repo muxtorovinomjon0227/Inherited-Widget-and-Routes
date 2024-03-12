@@ -9,15 +9,17 @@ class DiagramView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Diagram Screen",style: Theme.of(context).appBarTheme.titleTextStyle),
+        title: Text("Diagram Screen",
+            style: Theme.of(context).appBarTheme.titleTextStyle),
       ),
       body: _body(context),
     );
   }
-  Widget _body(BuildContext context){
+
+  Widget _body(BuildContext context) {
     return TextButton(
       child: Text("Goto page 2, data=${MyData.of(context).data}"),
-      onPressed: ()=> Navigator.pushReplacementNamed(context, RouteName.home),
+      onPressed: () => Navigator.pushReplacementNamed(context, RouteName.home),
     );
   }
 }

@@ -1,4 +1,4 @@
-class RouteName{
+class RouteName {
   RouteName._();
   static const String home = '/home';
   static const String dashboard = '/dashboard';

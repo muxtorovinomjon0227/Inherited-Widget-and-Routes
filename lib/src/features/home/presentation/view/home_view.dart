@@ -9,15 +9,17 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Home Screen",style: Theme.of(context).appBarTheme.titleTextStyle),
+        title: Text("Home Screen",
+            style: Theme.of(context).appBarTheme.titleTextStyle),
       ),
       body: _homeBody(context),
     );
   }
-  Widget _homeBody(BuildContext context){
+
+  Widget _homeBody(BuildContext context) {
     return TextButton(
       child: Text("Goto page 2, data=${MyData.of(context).data}"),
-      onPressed: ()=> Navigator.pushNamed(context, RouteName.dashboard),
+      onPressed: () => Navigator.pushNamed(context, RouteName.dashboard),
     );
   }
 }

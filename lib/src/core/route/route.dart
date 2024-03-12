@@ -14,7 +14,7 @@ class RouteWidget extends StatelessWidget {
       data: 'Hello Inherited',
       child: Navigator(
         onGenerateRoute: (settings) {
-          switch(settings.name){
+          switch (settings.name) {
             case RouteName.home:
               return generatePage(const HomeView());
             case RouteName.dashboard:
@@ -29,6 +29,7 @@ class RouteWidget extends StatelessWidget {
     );
   }
 }
+
 MaterialPageRoute generatePage(child) {
   return MaterialPageRoute(builder: (context) => child);
 }
